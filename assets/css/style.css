@@ -1,18 +1,24 @@
-:root{
-    --dark-blue:#0C4386;
-    --light-blue:#204f88;
-    --primary:#4490dc;
-    --primary-light:#5FA3E8;
-    --green:#6FAE9F;
-    --dark:#120101;
-    --light:#fff;
-    --light-grey:#F6F6F6;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-    --text-light-grey:#707070;
-    --text-dark:var(--dark);
-    --box-shadow: 0 8px 8px rgba(0,0,0,.16);
-    --primary-shadow: 0 8px 8px rgba(0,0,0,.16);
+:root {
+    --dark-blue: #0C4386;
+    --light-blue: #204f88;
+    --primary: #4490dc;
+    --primary-light: #5FA3E8;
+    --green: #6FAE9F;
+    --dark: #120101;
+    --light: #fff;
+    --light-grey: #F6F6F6;
+
+    --text-light-grey: #707070;
+    --text-dark: var(--dark);
+    --text-green: var(--green);
+    --text-dark-blue: var(--dark-blue);
+    --text-light-blue: var(--light-blue);
+    --box-shadow: 0 8px 8px rgba(0, 0, 0, .16);
+    --primary-shadow: 0 8px 8px rgba(0, 0, 0, .16);
 }
+
 .btn-primary {
     --bs-btn-font-weight: 400;
     --bs-btn-color: var(--light);
@@ -26,8 +32,9 @@
     --bs-btn-active-color: var(--light);
     --bs-btn-active-bg: var(--primary-light);
     --bs-btn-active-border-color: var(--primary-light);
-  }
-.btn-outline-primary{
+}
+
+.btn-outline-primary {
     --bs-btn-font-weight: 400;
     --bs-btn-color: var(--primary);
     --bs-btn-bg: var(--light);
@@ -41,10 +48,11 @@
     --bs-btn-active-bg: var(--primary-light);
     --bs-btn-active-border-color: var(--primary-light);
 }
-.btn-primary-dark{
+
+.btn-primary-dark {
     --bs-btn-font-weight: 400;
-    --bs-btn-color: var(--dark-blue);
-    --bs-btn-bg: var(--light);
+    --bs-btn-color: var(--light);
+    --bs-btn-bg: var(--dark-blue);
     --bs-btn-border-color: var(--dark-blue);
     --bs-btn-border-width: 2px;
     --bs-btn-border-radius: 12px;
@@ -55,6 +63,241 @@
     --bs-btn-active-bg: var(--light-blue);
     --bs-btn-active-border-color: var(--light-blue);
 }
-.shadow-default{
+
+.shadow-default {
     box-shadow: var(--box-shadow);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-dark-blue {
+    color: var(--dark-blue);
+}
+
+.text-green {
+    color: var(--text-green);
+}
+
+.text-shadow {
+    text-shadow: var(--box-shadow);
+}
+.fs-40{
+    font-size: 40px;
+}
+
+
+/* Global CSS */
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    color: var(--text-dark-blue) !important;
+}
+
+header .nav-link {
+    color: var(--text-dark-blue);
+    font-weight: 600;
+}
+
+header .nav-link.active {
+    color: var(--text-green) !important;
+}
+
+/* Global CSS */
+
+
+/* START---Home Page */
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 670px;
+    background: url('../img/hero-img.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.hero-section .content {
+    width: fit-content;
+    position: relative;
+    top: 120px;
+}
+
+.hero-section .content h2 {
+    font-size: 64px;
+}
+
+
+/* Review Section */
+.reviews .title {
+    margin-bottom: 40px;
+}
+
+.reviews .reviews-slider .owl-stage-outer {
+    min-height: 350px;
+}
+
+.reviews .reviews-slider .owl-stage-outer .owl-stage {
+    display: flex;
+}
+
+.reviews .review-card {
+    position: relative;
+    padding: 30px 15px;
+    min-width: 510px;
+    max-width: 510px;
+    border-top-left-radius: 180px;
+    background-color: var(--light);
+    height: 100%;
+}
+
+.reviews .review-card::before {
+    content: '';
+    width: 100%;
+    height: calc(100% + 1px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-blue);
+    z-index: -1;
+}
+
+.reviews .review-card .review-body {
+    text-align: justify;
+}
+
+.reviews .review-card .profile-img {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 21px;
+}
+
+.reviews .reviews-slider .owl-nav {
+    text-align: center;
+}
+
+.reviews .reviews-slider .owl-nav button {
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: .5;
+    transition: all .2s ease-in-out;
+}
+
+.reviews .reviews-slider .owl-nav button:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.reviews .reviews-slider .owl-nav button:hover img {
+    filter: invert(92%) sepia(77%) saturate(0%) hue-rotate(57deg) brightness(114%) contrast(100%);
+}
+
+.reviews .reviews-slider .owl-nav button:first-child {
+    margin-right: 20px;
+}
+.world-wide-c {
+    width: 100%;
+    padding: 100px 0 50px;
+}
+.world-wide-c .map img{
+    width: 100%;
+}
+.world-wide-c .buttons{
+    margin-top: 70px;
+}
+.world-wide-c .buttons a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.about-us{
+    min-height: 490px;
+}
+.about-us .about-bg-img{
+    background: url('../img/about.jpg') no-repeat top right;
+}
+
+
+
+
+/* END---Home Page */
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .hero-section .content h2 {
+        font-size: 34px !important;
+    }
+    .reviews .reviews-slider .owl-stage-outer {
+        min-height: 450px;
+    }
+    .reviews .review-card {
+        min-width: 100%;
+    }
+    .world-wide-c .buttons{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .world-wide-c .buttons a{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .fs-40{
+        font-size: 32px;
+    }
+    .text-md-justify {
+        text-align: justify;
+    }
+
+    .hero-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-section .content {
+        top: 0;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {}
+
+/* Medium Laptop */
+@media only screen and (max-width : 1366px) {
+    .hero-section .content h2 {
+        font-size: 42px;
+    }
+}
+
+
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1570px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 1870px;
+    }
 }
