@@ -104,7 +104,9 @@ header .nav-link {
 header .nav-link.active {
     color: var(--text-green) !important;
 }
-
+.footer{
+    background-color: var(--light-grey);
+}
 /* Global CSS */
 
 
