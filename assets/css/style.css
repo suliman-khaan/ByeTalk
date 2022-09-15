@@ -107,7 +107,9 @@
 .border-primaryL {
     border-color: var(--primary-light)!important;
 }
-
+html{
+    scroll-padding-top: 40px;
+}
 /* Global CSS */
 body{
     font-family: 'Open Sans', sans-serif;
@@ -125,16 +127,40 @@ header.v2 :is(.nav-link,.text-primary) {
 header .nav-link {
     color: var(--text-dark-blue);
     font-weight: 600;
+    position: relative;
+    overflow: hidden;
 }
-
+header .nav-link::before{
+    width: 0;
+    height: 2px;
+    content: '';
+    background-color: var(--primary);
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    transition: all 250ms ease-in-out;
+} 
+header .nav-link:hover::before{
+    width: calc(100% - 15px);
+}
 header .nav-link.active {
     color: var(--text-green) !important;
+}
+header .nav-link.active::before {
+    width: calc(100% - 15px);
+    background-color: var(--green);
 }
 .footer{
     background-color: var(--light-grey);
 }
 .footer h5{
     font-weight: 600;
+}
+.footer ul li a{
+    transition: all 150ms ease-in-out;
+}
+.footer ul li a:hover{
+    color: var(--primary)!important;
 }
 /* Global CSS */
 
@@ -377,6 +403,12 @@ header .nav-link.active {
     padding: 40px 35px;
     height: 100%;
     background-color: var(--light);
+    transition: all 250ms ease-in-out;
+}
+.plan-pricing .pricing .plan:hover{
+    background-color: var(--primary);
+    color: var(--light);
+    transform: scale(1.05);
 }
 .plan-pricing .pricing .plan .plan-name{
     padding-bottom: 43px;
@@ -470,12 +502,66 @@ header .nav-link.active {
 }
 .plan-pricing .add-on .addon-card{
     box-shadow: var(--box-shadow);
+    transition: all 250ms ease-in-out;
+}
+.plan-pricing .add-on .addon-card:hover{
+    background-color: var(--primary)!important;
+    color: var(--light)!important;
+    transform: scale(1.05);
 }
 .plan-pricing .add-on .points ul li:before{
     left: initial;
     transform: translate(-40px,-5px);
 }
 /* END-- PlanPricing Page */
+
+
+/* START-- Registration Page */
+.sign-up{
+    min-height: calc(100vh - 300px);
+    display: grid;
+    place-items: center;
+    color: var(--primary-light);
+}
+.sign-up .heading h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+.sign-up .heading p{
+    font-weight: 600;
+}
+.sign-up :is(input:not([type=submit]),textarea){
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-light)!important;
+    border: 3px solid var(--primary-light);
+}
+.sign-up .form div{
+    position: relative;
+}
+.sign-up .form label{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-light)!important;
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sign-up :is(.password-wrapper,.cpassword-wrapper){
+    position: relative;
+}
+.sign-up .password-wrapper .eye{
+    position: absolute;
+    right: 130px;
+    top: 8px;
+}
+.sign-up .cpassword-wrapper .eye{
+    position: absolute;
+    right: 205px;
+    top: 8px;
+}
+/* END-- Registration Page */
 
 
 

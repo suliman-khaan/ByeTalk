@@ -1,3 +1,18 @@
+(() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+
 // Init reviw
 $('.reviews-slider').owlCarousel({
     stagePadding: 150,
@@ -24,3 +39,16 @@ $('.reviews-slider').owlCarousel({
         }
     }
 })
+const eyes = document.querySelectorAll('.eye');
+eyes.forEach((element)=>{
+    element.addEventListener('click',(e)=>{
+        var input = e.target.parentElement.previousElementSibling
+        if(input.type == 'password'){
+            input.type = 'text'
+        }else{
+            input.type = 'password'
+        }
+    })
+})
+
+
