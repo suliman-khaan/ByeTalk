@@ -115,10 +115,10 @@ body{
 header {
     color: var(--text-dark-blue) !important;
 }
-header.contact-sales{
+header.v2{
     font-family: 'Poppins', sans-serif;
 }
-header.contact-sales :is(.nav-link,.text-primary) {
+header.v2 :is(.nav-link,.text-primary) {
     color: var(--primary-light) !important;
 }
 
@@ -132,6 +132,9 @@ header .nav-link.active {
 }
 .footer{
     background-color: var(--light-grey);
+}
+.footer h5{
+    font-weight: 600;
 }
 /* Global CSS */
 
@@ -275,7 +278,7 @@ header .nav-link.active {
     width: 760px;
     height: 760px;
     background-color: rgba(95,163,232,0.21176470588235294 );
-    border: 1px solid var(--primary-light);
+    border: 4px solid var(--primary-light);
     border-radius: 50%;
     z-index: -1;
 }
@@ -314,7 +317,7 @@ header .nav-link.active {
     width:150px;
     height:150px;
     background-color: rgba(95,163,232,0.21176470588235294 );
-    border: 1px solid var(--primary-light);
+    border: 4px solid var(--primary-light);
     border-radius: 50%;
     z-index: -1;
 }
@@ -334,11 +337,145 @@ header .nav-link.active {
     width: 300px;
     height: 300px;
     background-color: rgba(95,163,232,0.21176470588235294 );
-    border: 1px solid var(--primary-light);
+    border: 4px solid var(--primary-light);
     border-radius: 50%;
     z-index: -1;
 }
 /* END-- ContactSale Page */
+
+
+/* START-- PlanPricing Page */
+
+.plan-pricing{
+    padding: 120px 0;
+}
+.plan-pricing .pricing .title h1,
+.plan-pricing .add-on .heading h1{
+    font-weight: 600;
+    font-size: 60px;
+}
+/* row direct sibling of title */
+.plan-pricing .pricing .title + .row {
+    padding: 20px 0;
+    position: relative;
+}
+.plan-pricing .pricing .title + .row::before{
+    content: '';
+    position: absolute;
+    offset: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/rec.png') no-repeat top;
+    background-size: contain;
+    z-index: -1;
+}
+.plan-pricing .pricing .subtitle p {
+    font-weight: 600;
+    font-size: 24px;
+}
+.plan-pricing .pricing .plan{
+    padding: 40px 35px;
+    height: 100%;
+    background-color: var(--light);
+}
+.plan-pricing .pricing .plan .plan-name{
+    padding-bottom: 43px;
+}
+.plan-pricing .pricing .plan .plan-name{
+    font-weight: 600;
+    font-size: 36px;
+}
+.plan-pricing .pricing .plan .price ,
+.plan-pricing .add-on .price {
+    padding: 20px 0 30px;
+}
+.plan-pricing .pricing .plan .price .amount,
+.plan-pricing .add-on .price .amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    line-height: .8;
+}
+.plan-pricing .pricing .plan .price .amount .value,
+.plan-pricing .add-on .price .amount .value{
+    font-weight: 600;
+    font-size: 60px;
+}
+.plan-pricing .pricing .plan .price .duration,
+.plan-pricing .add-on .price .duration{
+    font-weight: 600;
+    font-size: 16px;
+}
+.plan-pricing .pricing .plan .points ul,
+.plan-pricing .add-on .points ul{
+    list-style: none;
+    font-weight: 600;
+    padding: 0;
+}
+.plan-pricing .pricing .plan .points ul li,
+.plan-pricing .add-on .points ul li{
+    padding-left: 35px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.plan-pricing .pricing .plan .points ul li::before,
+.plan-pricing .add-on .points ul li:before{
+    content: '';
+    position: absolute;
+    left:0;
+    width: 30px;
+    height: 30px;
+    background:url('../img/checkmark.png') no-repeat center;
+    background-size: contain;
+}
+
+.plan-pricing .add-on{
+    padding: 80px 0;
+}
+.plan-pricing .add-on .heading{
+    margin: 50px 0 80px;
+}
+.plan-pricing .add-on .addon-bg{
+    position: relative;
+} 
+.plan-pricing .add-on .addon-bg::before{
+    content: '';
+    width: 730px;
+    height: 730px;
+    position: absolute;
+    top :50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(95,163,232,0.21176470588235294 );
+    border: 4px solid var(--primary-light);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.plan-pricing .add-on .starting-at{
+    color: var(--text-light-grey);
+    font-weight: 600;
+    left: calc(50% - 60px);
+    position: relative;
+}
+.plan-pricing .add-on .price{
+    padding: 0 0 30px;
+}
+.plan-pricing .add-on .title{
+    padding: 30px 0 0;
+}
+.plan-pricing .add-on .addon-card:nth-child(odd) .title{
+    padding-bottom: 22px;
+}
+.plan-pricing .add-on .addon-card{
+    box-shadow: var(--box-shadow);
+}
+.plan-pricing .add-on .points ul li:before{
+    left: initial;
+    transform: translate(-40px,-5px);
+}
+/* END-- PlanPricing Page */
 
 
 
@@ -379,6 +516,7 @@ header .nav-link.active {
         right: -20px!important;
         top: -120px!important;
     }
+    
 }
 
 /* Small Devices, Tablets */
@@ -415,6 +553,9 @@ header .nav-link.active {
         bottom: -30px;
         left: 0;
     }
+    .plan-pricing .pricing .title + .row::before{
+        display: none;
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -448,6 +589,11 @@ header .nav-link.active {
         font-size: 42px;
     }
 }
+@media only screen and (min-width : 1200px) and (max-width : 1400px) {
+    .plan-pricing .pricing .plan-3 .plan-name{
+        padding-bottom: 0px;
+    }
+}
 @media only screen and (min-width : 1440px) {
     .contact-sales .contact-row .form::after{
         left: -250px;
@@ -461,13 +607,13 @@ header .nav-link.active {
 
 @media screen and (min-width: 1600px) {
     .container {
-        max-width: 1570px;
+        max-width: 1500px;
     }
 }
 
 @media screen and (min-width: 1920px) {
     .container {
-        max-width: 1870px;
+        max-width: 1820px;
     }
     .contact-sales .contact-row .form::after{
         left: -300px;
