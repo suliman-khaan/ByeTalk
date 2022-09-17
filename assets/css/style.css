@@ -610,140 +610,6 @@ header .nav-link.active::before {
 .products section .container .row {
   min-height: inherit;
 }
-/**********************
-
-    parteners - 1 page
-
-********************/
-/* herosection */
-.partners-hero-section{
-    position: relative;
-    color: var(--light);
-    width: 100%;
-    height: 760px;
-    background: url('../img/hero-images/blonde-woman.jpg') no-repeat center;
-    border-radius: 0 646px 0 0;
-    background-size: cover;
-}
-.partners-hero-section::before{
-    content:"";
-    position: absolute;
-    background:var(--light-blue) ;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left: 0;
-    z-index: -3;
-}
-.partners-hero-section .content {
-    width: fit-content;
-    position: relative;
-    top: 120px;
-}
-.partners-hero-section h1{
-    font-size: 60px;
-    font-weight: var(--font-weight-semi-bold);
-}
-.partners-hero-section p{
-    font-size: 30px;
-    font-weight: var(--font-weight-semi-bold);
-}
-.partners-hero-section a{
-    font-size: 20px;
-    font-weight: var(--font-weight-regular);
-}
-.partners-hero-section .content a:last-child{
-    color: var(--dark-blue);
-    transition: all 0.3s;
-}
-.partners-hero-section .content a:last-child:hover{
-    color: var(--light);
-    background: var(--primary)!important;
-}
-/* main seciton */
-
-.second-main-section section h1{
-    font-size: 45px;
-    color:var(--dark-blue);
-    font-family: var(--font-weight-semi-bold);
-}
-
-
-/* second section */
-.second-section-partners{
-    margin-top: 80px;
-}
-.second-section-card{
-    position: relative;
-    /* width: 570px; */
-    /* width: 470px; */
-    /* margin-right:  100px!important; */
-    height: 100%;
-    box-shadow: var(--box-shadow);
-    border-radius: 457px 0 0 0 ;
-    padding: 25px 80px;
-    /* z-index: 1; */
-    background-color: var(--light);
-}
-.second-section-card h2{
-    /* width: 200px; */
-    font-size: 40px;
-    font-weight: var(--font-weight-bold);
-}
-.second-section-card p{
-    /* width: 200px; */
-    font-size: 28px;
-    font-weight: var(--font-weight-regular);
-}
-.second-section-card::before{
-    content: "";
-    position: absolute;
-    background-color: var(--dark-blue);
-    width: 100%;
-    top: -1px;
-    left: 0;
-    height: 100%;
-    z-index: -1;
-    /* min-height: 540px; */
-}
-/* third section */
-.third-section-partners{
-    position: relative;
-    background-color: var(--light);
-    border-radius: 0 0 0 646px;
-}
-.third-section-partners::before{
-    content:"";
-    position: absolute;
-    background:var(--light-blue) ;
-    width: 100%;
-    height: 100%;
-    top:0;
-    z-index: -1;
-    left: 0;
-} 
-.third-section-partners{
-    margin-top: 180px;
-}
-.third-section-card h3{
-    font-size: 35px;
-    font-weight:var(--font-weight-semi-bold);
-}
-.third-section-card p {
-    font-size: 25px;
-    font-weight: var(--font-weight-regular);
-}
-/* last  row*/
-.last-row-partners{
-    margin-top: 200px;
-    padding-bottom: 100px;
-}
-.last-row-partners p{
-    font-size: 28px;
-    font-weight: var(--font-weight-regular);
-}
-
-
 .products .orbit {
   --area: 400px;
   --itemSpaceFromCenter: calc(var(--area) / 2);
@@ -872,6 +738,136 @@ header .nav-link.active::before {
 .products .tab-content .tab-pane .btns a {
   margin-left: 10px;
 }
+
+/**********************
+    parteners - 1 page
+********************/
+/* herosection */
+.partners-hero-section {
+  position: relative;
+  color: var(--light);
+  width: 100%;
+  height: 760px;
+  background: url("../img/hero-images/blonde-woman.jpg") no-repeat center;
+  border-radius: 0 646px 0 0;
+  background-size: cover;
+}
+.partners-hero-section::before {
+  content: "";
+  position: absolute;
+  background: var(--light-blue);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+.partners-hero-section .content {
+  width: fit-content;
+  position: relative;
+  top: 120px;
+}
+.partners-hero-section h1 {
+  font-size: 60px;
+  font-weight: var(--font-weight-semi-bold);
+}
+.partners-hero-section p {
+  font-size: 30px;
+  font-weight: var(--font-weight-semi-bold);
+}
+.partners-hero-section a {
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+}
+.partners-hero-section .content a:last-child {
+  color: var(--dark-blue);
+  transition: all 0.3s;
+}
+.partners-hero-section .content a:last-child:hover {
+  color: var(--light);
+  background: var(--primary) !important;
+}
+/* main seciton */
+
+.second-main-section section h1 {
+  font-size: 45px;
+  color: var(--dark-blue);
+  font-family: var(--font-weight-semi-bold);
+}
+
+/* second section */
+.second-section-partners {
+  margin-top: 80px;
+}
+.second-section-card {
+  position: relative;
+  /* width: 570px; */
+  /* width: 470px; */
+  /* margin-right:  100px!important; */
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  border-radius: 457px 0 0 0;
+  padding: 25px 80px;
+  /* z-index: 1; */
+  background-color: var(--light);
+}
+.second-section-card h2 {
+  /* width: 200px; */
+  font-size: 40px;
+  font-weight: var(--font-weight-bold);
+}
+.second-section-card p {
+  /* width: 200px; */
+  font-size: 28px;
+  font-weight: var(--font-weight-regular);
+}
+.second-section-card::before {
+  content: "";
+  position: absolute;
+  background-color: var(--dark-blue);
+  width: 100%;
+  top: -1px;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  /* min-height: 540px; */
+}
+/* third section */
+.third-section-partners {
+  position: relative;
+  background-color: var(--light);
+  border-radius: 0 0 0 646px;
+}
+.third-section-partners::before {
+  content: "";
+  position: absolute;
+  background: var(--light-blue);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  left: 0;
+}
+.third-section-partners {
+  margin-top: 180px;
+}
+.third-section-card h3 {
+  font-size: 35px;
+  font-weight: var(--font-weight-semi-bold);
+}
+.third-section-card p {
+  font-size: 25px;
+  font-weight: var(--font-weight-regular);
+}
+/* last  row*/
+.last-row-partners {
+  margin-top: 200px;
+  padding-bottom: 100px;
+}
+.last-row-partners p {
+  font-size: 28px;
+  font-weight: var(--font-weight-regular);
+}
 /* END-- Product PAge */
 
 /* Extra Small Devices, Phones */
@@ -918,26 +914,26 @@ header .nav-link.active::before {
     justify-content: space-between;
     margin-bottom: 40px;
   }
-  .products #products-mobile .nav-link.active{
+  .products #products-mobile .nav-link.active {
     background-color: var(--primary);
-     /*
+    color: var(--light);
+  }
+  /*
      parteners page
       */
-      .partners-hero-section{
-        border-radius: 0!important;
-    }
+  .partners-hero-section {
+    border-radius: 0 !important;
+  }
 
-    .partners-hero-section a{
-        /* margin-top: 0px!important; */
-        font-size: 13px!important;
-    }
-    .third-section-partners{
-        border-radius: 0!important;
-    }
-    .last-row-partners{
-        margin-top: 100px;
-    }
-   color: var(--light);
+  .partners-hero-section a {
+    /* margin-top: 0px!important; */
+    font-size: 13px !important;
+  }
+  .third-section-partners {
+    border-radius: 0 !important;
+  }
+  .last-row-partners {
+    margin-top: 100px;
   }
   .products #products-mobile button {
     color: var(--dark);
@@ -987,60 +983,58 @@ header .nav-link.active::before {
   .products .tab-content .tab-pane p {
     text-align: justify;
   }
-    /*
-    
+  /*
     partners page
-    
     */
-    .partners-hero-section{
-        border-radius: 0 300px 0 0;
-    }
-    .partners-hero-section h1{
-        font-size: 36px;
-    }
-    .partners-hero-section p{
-        font-size: 22px;
-    }
-    .partners-hero-section a{
-        /* margin-top: 0px!important; */
-        font-size: 16px;
-    }
-    /* section section */
-    .second-section-partners{
-        margin-top: 30px;
-    }
-    .second-main-section section h1{
-        font-size: 36px;
-    }
-    .second-section-partners .second-section-card h2{
-        font-size: 28px!important;
-    }
-    .second-section-partners .second-section-card p{
-        font-size: 16px!important;
-    }
-    /* third section */
-.third-section-partners{
+  .partners-hero-section {
+    border-radius: 0 300px 0 0;
+  }
+  .partners-hero-section h1 {
+    font-size: 36px;
+  }
+  .partners-hero-section p {
+    font-size: 22px;
+  }
+  .partners-hero-section a {
+    /* margin-top: 0px!important; */
+    font-size: 16px;
+  }
+  /* section section */
+  .second-section-partners {
+    margin-top: 30px;
+  }
+  .second-main-section section h1 {
+    font-size: 36px;
+  }
+  .second-section-partners .second-section-card h2 {
+    font-size: 28px !important;
+  }
+  .second-section-partners .second-section-card p {
+    font-size: 16px !important;
+  }
+  /* third section */
+  .third-section-partners {
     margin-top: 100px;
-}
-.third-section-card h3{
-    font-size: 32px!important;
-    font-weight:var(--font-weight-semi-bold);
-}
-.third-section-card p {
-    font-size: 16px!important;
+  }
+  .third-section-card h3 {
+    font-size: 32px !important;
+    font-weight: var(--font-weight-semi-bold);
+  }
+  .third-section-card p {
+    font-size: 16px !important;
     font-weight: var(--font-weight-regular);
-}
-/* last-row */
-.third-section-partners{
+  }
+  /* last-row */
+  .third-section-partners {
     border-radius: 0 0 0 300px;
-}
-.last-row-partners{
+  }
+  .last-row-partners {
     margin-top: 100px;
-}
-.last-row-partners p{
+  }
+  .last-row-partners p {
     font-size: 16px;
     font-weight: var(--font-weight-regular);
-}
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -1075,34 +1069,24 @@ header .nav-link.active::before {
     font-size: 42px;
   }
 
-    /* *****
-
-    partners pagee 
-    
-    */
-    /* second section */
-    .second-section-partners .second-section-card{
-        padding: 20px 40px;
-    }
-    .second-section-partners .second-section-card h2{
-        font-size: 36px;
-    }
-    .second-section-partners .second-section-card p{
-        font-size: 18px;
-    }
-
-
-
-
-
-
-
-
+  /* *****
+  partners pagee 
+  */
+  /* second section */
+  .second-section-partners .second-section-card {
+    padding: 20px 40px;
+  }
+  .second-section-partners .second-section-card h2 {
+    font-size: 36px;
+  }
+  .second-section-partners .second-section-card p {
+    font-size: 18px;
+  }
 }
-@media only screen and (min-width : 1200px) and (max-width : 1400px) {
-    .plan-pricing .pricing .plan-3 .plan-name{
-        padding-bottom: 0px;
-    }
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .plan-pricing .pricing .plan-3 .plan-name {
+    padding-bottom: 0px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .contact-sales .contact-row .form::after {
