@@ -39,17 +39,6 @@ $('.reviews-slider').owlCarousel({
         }
     }
 })
-const eyes = document.querySelectorAll('.eye');
-eyes.forEach((element) => {
-    element.addEventListener('click', (e) => {
-        var input = e.target.parentElement.previousElementSibling
-        if (input.type == 'password') {
-            input.type = 'text'
-        } else {
-            input.type = 'password'
-        }
-    })
-})
 $('.annoucement-slider .row').owlCarousel({
     items: 3,
     loop: true,
@@ -76,7 +65,7 @@ $('#slider').owlCarousel({
     items: 1,
     loop: true,
     dots: true,
-    dotsContainer :$('.dots-container'),
+    dotsContainer: $('.dots-container'),
     nav: false,
     autoplay: true,
     autoplayHoverPause: true,
@@ -84,5 +73,4 @@ $('#slider').owlCarousel({
     autoplaySpeed: 1000,
     dragEndSpeed: 500,
 })
-
 

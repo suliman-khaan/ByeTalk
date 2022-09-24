@@ -107,7 +107,7 @@
 }
 
 .text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .text-primary-light {
@@ -569,7 +569,11 @@ header .nav-link.active::before {
   position: relative;
 }
 
-.plan-pricing .add-on .addon-bg::before {
+.plan-pricing .add-on .heading+.row {
+  position: relative;
+}
+
+.plan-pricing .add-on .heading+.row::before {
   content: "";
   width: 730px;
   height: 730px;
@@ -577,9 +581,11 @@ header .nav-link.active::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(95, 163, 232, 0.21176470588235294);
-  border: 4px solid var(--dark-blue);
-  border-radius: 50%;
+  background: url('../img/add-ons.jpg') no-repeat center;
+  background-size: 100% 60%;
+  /* background-color: rgba(95, 163, 232, 0.21176470588235294); */
+  /* border: 4px solid var(--dark-blue); */
+  /* border-radius: 50%; */
   z-index: -1;
 }
 
@@ -605,6 +611,9 @@ header .nav-link.active::before {
 .plan-pricing .add-on .addon-card {
   box-shadow: var(--box-shadow);
   transition: all 250ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .plan-pricing .add-on .addon-card:hover {
@@ -625,34 +634,38 @@ header .nav-link.active::before {
 /* END-- PlanPricing Page */
 
 /* START-- Registration Page */
-.sign-up {
-  min-height: calc(100vh - 300px);
-  display: grid;
-  place-items: center;
+.account {
+  height: calc(100vh - 300px);
   color: var(--dark-blue);
 }
-
-.sign-up .heading h2 {
+.account .login{
+  background: url('../img/login.jpg') no-repeat;
+  background-position: left top;
+  height: 100%;
+  /* min-height: calc(100vh - 300px); */
+  position: relative;
+}
+.account .heading h2 {
   font-size: 36px;
   font-weight: 600;
 }
 
-.sign-up .heading p {
+.account .heading p {
   font-weight: 600;
 }
 
-.sign-up :is(input:not([type="submit"]), textarea) {
+.account :is(input:not([type="submit"]), textarea) {
   font-size: 18px;
   font-weight: 600;
   color: var(--dark-blue) !important;
   border: 3px solid var(--dark-blue);
 }
 
-.sign-up .form div {
+.account .form div {
   position: relative;
 }
 
-.sign-up .form label {
+.account .form label {
   font-size: 18px;
   font-weight: 600;
   color: var(--dark-blue) !important;
@@ -662,17 +675,17 @@ header .nav-link.active::before {
   transform: translateY(-50%);
 }
 
-.sign-up :is(.password-wrapper, .cpassword-wrapper) {
+.account :is(.password-wrapper, .cpassword-wrapper) {
   position: relative;
 }
 
-.sign-up .password-wrapper .eye {
+.account .password-wrapper .eye {
   position: absolute;
   right: 130px;
   top: 8px;
 }
 
-.sign-up .cpassword-wrapper .eye {
+.account .cpassword-wrapper .eye {
   position: absolute;
   right: 205px;
   top: 8px;
@@ -835,6 +848,37 @@ header .nav-link.active::before {
   margin-left: 10px;
 }
 
+.products .for-meeting-tab {
+  height: 0;
+  transition: all .15s linear;
+  padding: 0;
+}
+
+.products .for-meeting-tab .fade-effect {
+  transition: all .15s linear;
+  transition-delay: 50ms;
+  opacity: 0;
+}
+
+.products .for-meeting-tab.show {
+  height: 100%;
+}
+
+.products .for-meeting-tab.show .fade-effect {
+  opacity: 1;
+  padding-bottom: 100px;
+}
+
+.products .section-2 {
+  background: url('../img/section-2.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.products .section-3 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 /* END-- Product PAge */
 
 /* Start-- Partners PAge */
@@ -846,7 +890,7 @@ header .nav-link.active::before {
   width: 100%;
   height: 760px;
   background: url("../img/hero-images/blonde-woman.jpg") no-repeat center;
-  border-radius: 0% 35% 0% 0% / 0% 60% 0% 0% ;
+  border-radius: 0% 35% 0% 0% / 0% 60% 0% 0%;
   background-size: cover;
 }
 
@@ -970,6 +1014,7 @@ header .nav-link.active::before {
   z-index: -1;
   left: 0;
 }
+
 .last-row-partners {
   margin-top: 200px;
   padding-bottom: 100px;
@@ -1158,9 +1203,10 @@ header .nav-link.active::before {
 
 
 /* START-- How To Videos PAge */
-.how-to-video .video{
+.how-to-video .video {
   margin-bottom: 100px;
 }
+
 /* END-- How To Videos PAge */
 
 
@@ -1170,6 +1216,10 @@ header .nav-link.active::before {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .home .hero-section .content {
+    top: 0;
+  }
+
   .hero-section .content h2 {
     font-size: 34px !important;
   }
@@ -1233,21 +1283,25 @@ header .nav-link.active::before {
   .partners-hero-section {
     border-radius: 0 !important;
   }
-  .partners-hero-section .content{
-    background-color: rgba(0,0,0, .4);
+
+  .partners-hero-section .content {
+    background-color: rgba(0, 0, 0, .4);
     padding: 10px;
   }
-  
+
   .partners-hero-section a {
     /* margin-top: 0px!important; */
     font-size: 13px !important;
   }
-  .second-section-partners h1{
-    font-size: 28px!important;
+
+  .second-section-partners h1 {
+    font-size: 28px !important;
   }
-  .second-section-card h2{
-    font-size: 18px!important;
+
+  .second-section-card h2 {
+    font-size: 18px !important;
   }
+
   .third-section-partners {
     border-radius: 0 !important;
   }
@@ -1259,13 +1313,15 @@ header .nav-link.active::before {
   .products #products-mobile button {
     color: var(--dark);
   }
-  .developers .hero-section .content{
+
+  .developers .hero-section .content {
     background-color: rgba(255, 255, 255, .3);
     width: 100%;
     right: 0;
     padding: 20px;
   }
-  .developers .option img{
+
+  .developers .option img {
     width: 300px;
   }
 }
@@ -1315,6 +1371,10 @@ header .nav-link.active::before {
     display: none;
   }
 
+  .plan-pricing .add-on .heading+.row::before {
+    display: none;
+  }
+
   .products .orbit {
     margin: 50px auto 100px;
   }
@@ -1332,15 +1392,15 @@ header .nav-link.active::before {
     */
   .partners-hero-section {
     border-radius: 0 300px 0 0;
-    height: 400px!important;
+    height: 400px !important;
   }
 
   .partners-hero-section h1 {
-    font-size: 32px!important;
+    font-size: 32px !important;
   }
 
   .partners-hero-section p {
-    font-size: 18px!important;
+    font-size: 18px !important;
   }
 
   .partners-hero-section a {
@@ -1356,9 +1416,11 @@ header .nav-link.active::before {
   .second-main-section section h1 {
     font-size: 36px;
   }
+
   .second-section-partners .second-section-card {
-    padding: 10px 20px 10px 40px!important;
+    padding: 10px 20px 10px 40px !important;
   }
+
   .second-section-partners .second-section-card h2 {
     font-size: 22px !important;
   }
@@ -1404,13 +1466,15 @@ header .nav-link.active::before {
   .investors .slider-nav button:last-child {
     right: 10px;
   }
+
   .developers .hero-section {
     --height: 300px;
     height: var(--height);
     background-position: center;
     border-radius: 0;
   }
-  .developers .hero-section .content{
+
+  .developers .hero-section .content {
     background-color: rgba(255, 255, 255, .3);
     /* width: 100%; */
     right: 0;
@@ -1437,7 +1501,7 @@ header .nav-link.active::before {
     left: -320px;
     top: -60px;
   }
-  
+
   /* .contact-sales .contact-row .right-section .img::before{
         bottom: 0;
         left:-20px;
@@ -1453,12 +1517,15 @@ header .nav-link.active::before {
   .investors .hero-section p {
     font-size: 22px;
   }
+
   .partners-hero-section {
     height: 560px;
   }
+
   .partners-hero-section h1 {
     font-size: 48px;
   }
+
   .partners-hero-section p {
     font-size: 24px;
   }
@@ -1490,25 +1557,28 @@ header .nav-link.active::before {
     background-color: rgba(255, 255, 255, .3);
     padding: 10px;
   }
+
   .developers .hero-section {
     --height: 400px;
     height: var(--height);
     background-position: 0;
   }
-  
+
   .developers .hero-section .content {
     right: 20px;
   }
 }
 
 @media only screen and (max-width: 1440px) {
-  .second-section-partners .second-section-card{
+  .second-section-partners .second-section-card {
     padding: 25px 25px 25px 50px;
   }
-  .second-section-partners .second-section-card h2{
+
+  .second-section-partners .second-section-card h2 {
     font-size: 32px;
   }
-  .second-section-partners .second-section-card p{
+
+  .second-section-partners .second-section-card p {
     font-size: 20px;
   }
 }
@@ -1519,6 +1589,7 @@ header .nav-link.active::before {
     padding-bottom: 0px;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   .contact-sales .contact-row .form::after {
     left: -250px;
@@ -1554,5 +1625,5 @@ header .nav-link.active::before {
     bottom: -60px;
     left: -60px;
   }
-  
+
 }
