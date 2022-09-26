@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
                         <li class="nav-item me-0 me-lg-2 me-xl-5">
-                            <a class="nav-link active" href="./plans-and-pricing.html">Plans & Pricing</a>
+                            <a class="nav-link" href="./plans-and-pricing.html">Plans & Pricing</a>
                         </li>
                         <li class="nav-item me-0 me-lg-2 me-xl-5">
                             <a class="nav-link" href="./index.html#feature">Features</a>
@@ -65,9 +65,9 @@
                             <!-- Desktop version -->
                             <ul class="nav nav-pills" id="products" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link p-0 active" id="business-sol" data-bs-toggle="tab"
+                                    <a class="nav-link p-0" id="business-sol" data-bs-toggle="tab"
                                         data-bs-target="#business-sol-pane" type="button" role="tab"
-                                        aria-controls="business-sol-pane" aria-selected="true">
+                                        aria-controls="business-sol-pane" aria-selected="false">
                                         <span>
                                             <img src="../assets/img/icon/business-solution.svg" alt="">
                                         </span>
@@ -175,9 +175,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link p-0" id="meeting-tab" data-bs-toggle="tab"
+                                    <a class="nav-link p-0 active" id="meeting-tab" data-bs-toggle="tab"
                                         data-bs-target="#meeting-tab-pane" type="button" role="tab"
-                                        aria-controls="meeting-tab-pane" aria-selected="false">
+                                        aria-controls="meeting-tab-pane" aria-selected="true">
                                         <span class="me-0">
                                             <img src="../assets/img/icon/meeting.svg" alt="">
                                         </span>
@@ -189,9 +189,9 @@
                         <!-- Mobile version -->
                         <ul class="nav nav-pills d-md-none" id="products-mobile" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="business-sol" data-bs-toggle="tab"
+                                <button class="nav-link" id="business-sol" data-bs-toggle="tab"
                                     data-bs-target="#business-sol-pane" type="button" role="tab"
-                                    aria-controls="business-sol-pane" aria-selected="true">
+                                    aria-controls="business-sol-pane" aria-selected="false">
                                     Business Solutions
                                 </button>
                             </li>
@@ -266,9 +266,9 @@
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="meeting-tab" data-bs-toggle="tab"
+                                <button class="nav-link active" id="meeting-tab" data-bs-toggle="tab"
                                     data-bs-target="#meeting-tab-pane" type="button" role="tab"
-                                    aria-controls="meeting-tab-pane" aria-selected="false">
+                                    aria-controls="meeting-tab-pane" aria-selected="true">
                                     Meeting
                                 </button>
                             </li>
@@ -276,7 +276,7 @@
                     </div>
                     <div class="tab-content align-self-center col-md-12 col-lg-6 col-xl-6 col-xxl-7"
                         id="productsContent">
-                        <div class="tab-pane fade show active" id="business-sol-pane" role="tabpanel"
+                        <div class="tab-pane fade" id="business-sol-pane" role="tabpanel"
                             aria-labelledby="business-sol" tabindex="0">
                             <h1 class="mb-3">Business Solutions</h1>
                             <p>Bye Talk’s connective software has the power to transform your business.
@@ -444,7 +444,7 @@
                                     Pricing</a>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="meeting-tab-pane" role="tabpanel" aria-labelledby="meeting-tab"
+                        <div class="tab-pane fade show active" id="meeting-tab-pane" role="tabpanel" aria-labelledby="meeting-tab"
                             tabindex="0">
                             <h1 class="mb-3">Meeting</h1>
                             <p>Setting up meetings is only one click or voice note away. Our system gets you and your
@@ -627,6 +627,7 @@
             const meetingTab = document.querySelector('a[data-bs-target="#meeting-tab-pane"]')
             const meetingMobileTab = document.querySelector('button[data-bs-target="#meeting-tab-pane"]')
             const meetingContent = document.querySelector('.for-meeting-tab');
+            meetingContent.classList.add('show')
             meetingTab.addEventListener('shown.bs.tab', showMeetingContent)
             meetingMobileTab.addEventListener('shown.bs.tab', showMeetingContent)
             meetingTab.addEventListener('hidden.bs.tab', hideMeetingContent)
