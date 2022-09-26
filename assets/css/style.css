@@ -641,7 +641,7 @@ header .nav-link.active::before {
 
 /* START-- Registration Page */
 .account {
-  height: calc(100vh - 300px);
+  height: calc(100vh - 80px);
   font-weight: var(--font-weight-regular);
 }
 
