@@ -2,6 +2,7 @@
 
 :root {
   --dark-blue: #0c4386;
+  --dark-blue-25: rgba(12, 67, 134, .25);
   --light-blue: #204f88;
   --primary: #4490dc;
   --primary-light: #5fa3e8;
@@ -97,9 +98,16 @@
   --bs-btn-active-bg: var(--light-blue);
   --bs-btn-active-border-color: var(--light-blue);
 }
+
 /* Selection color */
-::selection,::-moz-selection{
-  background: var(--dark-blue);
+::selection,
+::-moz-selection {
+  background: rgba(12, 67, 134, .8);
+  color: var(--light);
+}
+
+::selection {
+  background: rgba(12, 67, 134, .8);
   color: var(--light);
 }
 
@@ -191,6 +199,55 @@ header .nav-link.active {
 header .nav-link.active::before {
   width: calc(100% - 15px);
   background-color: var(--green);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+header .dropdown-menu.show {
+  -webkit-animation: fadeIn 0.3s alternate;
+  animation: fadeIn 0.3s alternate;
+}
+
+header .mega-menu .dropdown-menu {
+  width: calc(100% - 40px);
+  /* top: auto; */
+  border: 1px solid var(--text-light-grey);
+}
+
+header .mega-menu .dropdown-menu ul {
+  list-style: none;
+}
+
+header .mega-menu .dropdown-menu ul li {
+  padding: 5px;
+  transition: background .3s ease;
+  margin-bottom: 10px;
+}
+
+header .mega-menu .dropdown-menu ul li:hover {
+  background-color: var(--dark-blue-25);
+}
+
+header .mega-menu .dropdown-menu .menu-item {
+  text-transform: none;
+}
+
+header .mega-menu .dropdown-menu .menu-item h5 {
+  color: var(--dark);
+  font-weight: var(--font-weight-bold);
+}
+
+header .mega-menu .dropdown-menu .menu-item p {
+  color: var(--text-light-grey);
+  font-weight: var(--font-weight-regular);
 }
 
 .footer {
@@ -664,10 +721,12 @@ header .nav-link.active::before {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .account .login-container .form-check-input:checked {
   border-color: var(--dark-blue) !important;
   background-color: var(--dark-blue) !important;
 }
+
 .account .heading h2 {
   font-size: 36px;
   font-weight: var(--font-weight-medium);
@@ -1314,9 +1373,10 @@ header .nav-link.active::before {
   .developers .option img {
     width: 300px;
   }
+
   .env-duties .hero-slider .slider .footer {
-    height: 250px!important;
-  } 
+    height: 250px !important;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -1478,9 +1538,10 @@ header .nav-link.active::before {
     right: 0;
     padding: 20px;
   }
+
   .env-duties .hero-slider .slider .footer {
     height: 150px;
-  } 
+  }
 }
 
 /* Medium Devices, Desktops */
