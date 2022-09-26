@@ -97,9 +97,10 @@
   --bs-btn-active-bg: var(--light-blue);
   --bs-btn-active-border-color: var(--light-blue);
 }
-
-.red {
-  outline: 1px solid red;
+/* Selection color */
+::selection,::-moz-selection{
+  background: var(--dark-blue);
+  color: var(--light);
 }
 
 .shadow-default {
@@ -133,6 +134,11 @@
 
 .border-primaryL {
   border-color: var(--primary-light) !important;
+}
+
+.form-check-input:checked {
+  border-color: var(--primary) !important;
+  background-color: var(--primary) !important;
 }
 
 html {
@@ -636,60 +642,44 @@ header .nav-link.active::before {
 /* START-- Registration Page */
 .account {
   height: calc(100vh - 300px);
-  color: var(--dark-blue);
+  font-weight: var(--font-weight-regular);
 }
-.account .login{
+
+.account .login {
   background: url('../img/login.jpg') no-repeat;
   background-position: left top;
   height: 100%;
-  /* min-height: calc(100vh - 300px); */
   position: relative;
+}
+
+.account .signup {
+  background: url('../img/sign.jpg') no-repeat;
+  background-position: left top;
+  height: 100%;
+  position: relative;
+}
+
+.account .login-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.account .login-container .form-check-input:checked {
+  border-color: var(--dark-blue) !important;
+  background-color: var(--dark-blue) !important;
 }
 .account .heading h2 {
   font-size: 36px;
-  font-weight: 600;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 60px;
 }
 
-.account .heading p {
-  font-weight: 600;
+.account :is(input:not([type="submit"])) {
+  border-color: var(--dark);
+  font-weight: 500;
 }
 
-.account :is(input:not([type="submit"]), textarea) {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark-blue) !important;
-  border: 3px solid var(--dark-blue);
-}
 
-.account .form div {
-  position: relative;
-}
-
-.account .form label {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark-blue) !important;
-  position: absolute;
-  right: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.account :is(.password-wrapper, .cpassword-wrapper) {
-  position: relative;
-}
-
-.account .password-wrapper .eye {
-  position: absolute;
-  right: 130px;
-  top: 8px;
-}
-
-.account .cpassword-wrapper .eye {
-  position: absolute;
-  right: 205px;
-  top: 8px;
-}
 
 /* END-- Registration Page */
 
@@ -1324,6 +1314,9 @@ header .nav-link.active::before {
   .developers .option img {
     width: 300px;
   }
+  .env-duties .hero-slider .slider .footer {
+    height: 250px!important;
+  } 
 }
 
 /* Small Devices, Tablets */
@@ -1343,6 +1336,11 @@ header .nav-link.active::before {
 
   .hero-section .content {
     top: 0;
+  }
+
+  .account .login,
+  .account .signup {
+    background-size: cover;
   }
 
   .contact-sales .contact-row {
@@ -1480,6 +1478,9 @@ header .nav-link.active::before {
     right: 0;
     padding: 20px;
   }
+  .env-duties .hero-slider .slider .footer {
+    height: 150px;
+  } 
 }
 
 /* Medium Devices, Desktops */
@@ -1617,6 +1618,7 @@ header .nav-link.active::before {
     top: -60px;
   }
 
+
   .contact-sales .contact-row .right-section::before {
     left: calc(90vw / 2);
   }
@@ -1626,4 +1628,12 @@ header .nav-link.active::before {
     left: -60px;
   }
 
+}
+
+@media screen and (min-width: 2000px) {
+
+  .account .login,
+  .account .signup {
+    background-size: contain;
+  }
 }

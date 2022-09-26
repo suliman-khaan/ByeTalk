@@ -57,26 +57,30 @@
         <section class="login">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
-                    <div class="login-container text-center col-3 ms-auto">
+                    <div class="login-container text-center col-10 col-md-6 col-lg-4 col-xl-3 offset-1 offset-md-3 offset-lg-0 ms-lg-auto">
                         <div class="heading mb-4">
                             <h2 class="text-uppercase">Login</h2>
                         </div>
                         <div class="form">
                             <form>
                                 <div class="mb-3">
-                                    <input id="email" type="email" class="form-control rounded-0">
+                                    <input id="email" type="email" class="form-control rounded-0 shadow-none" placeholder="Email Address">
                                 </div>
-                                <div class="mb-3 password-wrapper">
-                                    <input id="password" type="password" class="form-control rounded-0">
+                                <div class="mb-3">
+                                    <input id="password" type="password" class="form-control rounded-0 shadow-none" placeholder="Password">
                                 </div>
                                 <div class="mb-3 text-start">
-                                    <a href="#" class="text-primary-dark" style="font-weight: 600;">Forgot your password?</a>
+                                    <input id="remember" type="checkbox" class="form-check-input shadow-none" style="border-width: 2px;">
+                                    <label for="remember" class="form-check-label">Remember Me</label>
                                 </div>
-                                <div class="text-center">
+                                <div class="text-center mb-3">
                                     <button type="submit"
-                                    class="btn btn-primary-dark rounded-0 px-4 text-uppercase mt-4">Sign in</button>
-                                    <a href="../src/signup.html" class="d-block mt-4 text-primary-dark" style="font-weight: 600;">Create an account</a>
-                                        
+                                    class="btn btn-primary-dark px-5 rounded-1 text-uppercase">Login</button>
+                                    
+                                </div>
+                                <div class="mb-3">
+                                    <a href="#" class="text-dark text-decoration-none">Forgot Email Address/Password?</a>
+                                    <a href="../src/signup.html" class="d-block text-primary-dark">Create an account</a>
                                 </div>
                             </form>
                         </div>
