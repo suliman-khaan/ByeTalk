@@ -188,7 +188,8 @@ header .nav-link::before {
   transition: all 250ms ease-in-out;
 }
 
-header .nav-link:hover::before {
+header .nav-link:hover::before,
+header .nav-link.show::before {
   width: calc(100% - 15px);
 }
 
@@ -218,7 +219,7 @@ header .dropdown-menu.show {
 
 header .mega-menu .dropdown-menu {
   width: calc(100% - 40px);
-  /* top: auto; */
+  top: auto;
   border: 1px solid var(--text-light-grey);
 }
 
@@ -240,12 +241,12 @@ header .mega-menu .dropdown-menu .menu-item {
   text-transform: none;
 }
 
-header .mega-menu .dropdown-menu .menu-item h5 {
+header .mega-menu .dropdown-menu .menu-item .title {
   color: var(--dark);
   font-weight: var(--font-weight-bold);
 }
 
-header .mega-menu .dropdown-menu .menu-item p {
+header .mega-menu .dropdown-menu .menu-item .subtitle {
   color: var(--text-light-grey);
   font-weight: var(--font-weight-regular);
 }
@@ -1265,6 +1266,9 @@ header .mega-menu .dropdown-menu .menu-item p {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  header .mega-menu .dropdown-menu ul{
+    padding-left: 5px;
+  }
   .home .hero-section .content {
     top: 0;
   }
@@ -1388,7 +1392,12 @@ header .mega-menu .dropdown-menu .menu-item p {
   .text-md-justify {
     text-align: justify;
   }
-
+header .mega-menu .dropdown-menu .menu-item .title {
+  font-size: 16px;
+}
+header .mega-menu .dropdown-menu .menu-item .subtitle {
+  font-size: 14px;
+}
   .hero-section {
     display: flex;
     align-items: center;
@@ -1572,6 +1581,10 @@ header .mega-menu .dropdown-menu .menu-item p {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  
+  header .mega-menu .dropdown-menu {
+    width: 100%;
+  }
   .investors .hero-section {
     height: 300px;
   }
@@ -1664,6 +1677,11 @@ header .mega-menu .dropdown-menu .menu-item p {
 }
 
 @media screen and (min-width: 1600px) {
+  
+  header .mega-menu .dropdown-menu {
+    width: 70%;
+    left: auto;
+  }
   .container {
     max-width: 1500px;
   }
