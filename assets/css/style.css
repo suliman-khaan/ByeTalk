@@ -220,6 +220,7 @@ header .dropdown-menu.show {
 header .mega-menu .dropdown-menu {
   width: calc(100% - 40px);
   top: auto;
+  left:0;
   border: 1px solid var(--text-light-grey);
 }
 
