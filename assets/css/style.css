@@ -1363,7 +1363,9 @@ header .mega-menu .dropdown-menu .menu-item .subtitle {
   .last-row-partners {
     margin-top: 100px;
   }
-
+  .last-row-section::before {
+    display: none;
+  }
   .products #products-mobile button {
     color: var(--dark);
   }
@@ -1393,6 +1395,9 @@ header .mega-menu .dropdown-menu .menu-item .subtitle {
   .text-md-justify {
     text-align: justify;
   }
+header .navbar-brand img{
+  width: 90px;
+}
 header .mega-menu .dropdown-menu .menu-item .title {
   font-size: 16px;
 }
